@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>P03 项目编辑－前端配置</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f4f6f7;color:#202a36;font:14px "Microsoft YaHei",Arial,sans-serif}.top{height:50px;background:#006d66;color:#fff;display:flex;align-items:center}.brand{width:210px;font-size:20px;font-weight:bold;padding-left:20px}.top span{height:50px;padding:16px 20px}.top .on{background:#005751}.top .tools{margin-left:auto;font-size:13px;opacity:.82}.layout{display:flex;min-height:calc(100vh - 50px)}.side{width:210px;background:#fff;padding:7px 4px}.side div{height:44px;padding:12px 24px}.side .on{background:#92b9ae;border-radius:8px;color:#006d66;font-weight:bold}.main{flex:1;padding:0 10px}.tabs{height:42px;background:#fff;padding:13px 18px;color:#3d4a56}.tabs b{background:#c5ded8;color:#006d66;padding:14px 17px;border-radius:8px 8px 0 0}.list{height:calc(100vh - 112px);margin-top:10px;background:#fff;border-radius:8px;padding:24px}.filters input{width:240px;height:32px;border:1px solid #d9dfe6;border-radius:4px;padding:0 10px}.btn{height:33px;padding:0 15px;border:1px solid #d9dfe6;background:#fff;border-radius:4px;cursor:pointer}.primary{background:#009b92;color:#fff;border-color:#009b92}.grid{width:100%;border-collapse:collapse;margin-top:16px;color:#34404c}.grid td,.grid th{padding:14px;border:1px solid #eceff1;text-align:left}.mask{position:fixed;inset:50px 0 0;background:#0007;z-index:3}.modal{position:fixed;z-index:4;left:50%;top:100px;transform:translateX(-50%);width:min(1400px,82vw);height:calc(100vh - 143px);min-height:650px;background:#fff;border-radius:10px;box-shadow:0 10px 28px #0004}.title{height:60px;padding:19px 24px;font-size:18px;font-weight:bold;border-bottom:1px solid #eee}.x{float:right;color:#8a9198;font-size:25px;font-weight:normal;line-height:18px}.steps{height:74px;display:flex;justify-content:center;gap:34px;align-items:center}.step{color:#536271;font-size:15px}.step i{font-style:normal;display:inline-block;background:#cae2dd;color:#008f86;border-radius:50%;height:31px;width:31px;text-align:center;line-height:31px;margin-right:8px}.step.active i{background:#009b92;color:#fff}.form{border-top:1px solid #eee;padding:17px 76px 86px;overflow:auto;height:calc(100% - 134px)}.setting-row{display:flex;align-items:center;min-height:56px;gap:12px}.setting-row label{width:180px;text-align:right;color:#313b48}.required:before{content:"*";color:#f33;margin-right:6px}.switch{border:0;width:44px;height:22px;border-radius:12px;background:#b9bdc0;display:inline-block;position:relative;cursor:pointer}.switch:after{content:"";background:#fff;width:18px;height:18px;border-radius:50%;position:absolute;top:2px;left:2px;box-shadow:0 1px 2px #0003}.switch.on{background:#009b92}.switch.on:after{left:24px}.hint{color:#9aa0a7;font-size:13px}.section-line{border:0;border-top:1px solid #edf0f1;margin:5px 0 14px}.binding-note{margin:-2px 0 11px 192px;color:#8a929a;font-size:12px;line-height:20px}.binding-note.enabled{color:#008f86}.service-list{margin-left:192px}.service-card{display:flex;align-items:center;min-height:50px;margin-bottom:16px;padding:0 24px;border:1px solid #edf0f1;border-radius:7px}.checkbox{width:17px;height:17px;margin-right:9px;accent-color:#009b92}.service-name{font-weight:bold}.input-name{width:150px;height:26px;padding:0 10px;border:1px solid #d9dfe6;border-radius:4px;font:inherit}.card-actions{margin-left:auto;color:#111;font-size:24px;line-height:1}.trash{margin-right:27px;color:#ff6670;font-size:18px}.add-service{margin:24px 0 10px 192px;height:33px;border:1px dashed #d9dfe6;border-radius:4px;text-align:center;line-height:31px;color:#333;cursor:pointer}.footer{position:absolute;bottom:0;left:0;right:0;height:64px;border-top:1px solid #eee;text-align:right;padding:15px 26px;background:#fff;border-radius:0 0 10px 10px}.tag{background:#fff0c7;color:#9a6900;border-radius:8px;padding:1px 5px;font-size:11px}.highlight{outline:3px solid #f59e0b;outline-offset:3px}body[data-prototype-mode="prototype"] .tag{display:none}@media(max-width:1050px){.side{display:none}.modal{width:94vw}.form{padding:16px 30px}.service-list,.add-service{margin-left:145px}.binding-note{margin-left:145px}.setting-row label{width:133px}}
+  </style>
+</head>
+<body>
+  <header class="top"><b class="brand">▰ 睿聆智能云</b><span>☰</span><span>◔ 客服工作台</span><span class="on">▣ 业务工作台</span><span>⚙ 系统控制台</span><span class="tools">⌕　⤢　管理员　▣</span></header>
+  <div class="layout">
+    <aside class="side"><div>▤ 服务管理</div><div>▤ 产品管理</div><div>▤ 企业管理</div><div class="on">▱ 项目管理</div><div>▣ 会员管理</div><div>♧ 供应商管理</div><div>▧ 激活码管理</div><div>▤ 白名单管理</div><div>▧ 核保测评方案配置</div></aside>
+    <main class="main"><div class="tabs">‹　待办事项　　产品管理　×　　<b>项目管理　×</b>　　机构管理　×　　万能表单配置　×　　表单设计　×　　服务管理　×</div><section class="list"><div class="filters">项目名称：<input placeholder="请输入项目名称">　<button class="btn primary">⌕ 查询</button>　<button class="btn">⟳ 重置</button></div><p><button class="btn primary">＋ 新增</button>　<button class="btn">▣ 批量删除</button></p><table class="grid"><tr><th>□</th><th>项目ID</th><th>项目名称</th><th>项目状态</th><th>创建时间</th><th>操作</th></tr><tr><td>□</td><td>2072594177921179650</td><td>新华尊项目</td><td>启用</td><td>2026-08-18</td><td style="color:#1677ff">编辑　删除　更多⌄</td></tr><tr><td>□</td><td>20667780774594043905</td><td>中意财险如意甲疾病保险</td><td>启用</td><td>2026-08-12</td><td style="color:#1677ff">编辑　删除　更多⌄</td></tr></table></section></main>
+  </div>
+  <div class="mask"></div>
+  <section class="modal">
+    <div class="title">编辑项目信息 <span class="x">×</span></div>
+    <div class="steps"><span class="step"><i>✓</i>基本信息</span><span class="step"><i>✓</i>产品配置</span><span class="step active"><i>3</i>前端配置</span></div>
+    <div class="form">
+      <div class="setting-row"><label class="required">开启H5前端页面：</label><button id="h5-switch" class="switch on" onclick="toggleSwitch('h5-switch')" aria-label="开启H5前端页面"></button></div>
+      <div class="setting-row"><label>是否开启激活验证页面：</label><button id="activation-switch" class="switch" onclick="toggleSwitch('activation-switch')" aria-label="是否开启激活验证页面"></button></div>
+      <div class="setting-row"><label>首页弹窗说明：</label><button id="home-tip-switch" class="switch" onclick="toggleSwitch('home-tip-switch')" aria-label="首页弹窗说明"></button><span class="hint">用户登录/退出账户重新登录账户时，弹窗提醒</span></div>
+      <div class="setting-row" data-change-id="P03-C05"><label>是否绑定用户：</label><button id="bind-user-switch" class="switch" onclick="toggleUserBinding()" aria-label="是否绑定用户"></button><span class="tag">P03-C05</span></div>
+      <p id="binding-note" class="binding-note">若选择否，用户进入项目时及发起服务时，不校验任何权限，适合无备案项目使用</p>
+      <hr class="section-line">
+      <div><div class="setting-row"><label class="required">显示服务入口：</label></div><div class="service-list">
+        <div class="service-card"><input class="checkbox" type="checkbox"><span class="service-name">健康资讯</span></div>
+        <div class="service-card"><input class="checkbox" type="checkbox"><span class="service-name">体检报告解读</span><span class="card-actions">›</span></div>
+        <div class="service-card"><input class="checkbox" type="checkbox"><span class="service-name">体检报告AI对话</span><span class="card-actions">›</span></div>
+        <div class="service-card"><input class="checkbox" type="checkbox"><span class="service-name">随访</span></div>
+        <div class="service-card"><input class="checkbox" type="checkbox" checked><input class="input-name" value="门诊预约"><span class="card-actions"><span class="trash">♧</span>›</span></div>
+        <div class="service-card"><input class="checkbox" type="checkbox" checked><input class="input-name" value="陪医陪同"><span class="card-actions"><span class="trash">♧</span>›</span></div>
+      </div></div>
+      <div class="add-service">＋ 添加通用服务</div>
+    </div>
+    <div class="footer"><button class="btn">关闭</button>　<button class="btn primary">上一步</button>　<button class="btn primary" onclick="alert('前端配置已提交')">提交</button></div>
+  </section>
+  <script>
+    function toggleSwitch(id){document.getElementById(id).classList.toggle('on')}
+    function toggleUserBinding(){const button=document.getElementById('bind-user-switch'),note=document.getElementById('binding-note');button.classList.toggle('on');const enabled=button.classList.contains('on');note.classList.toggle('enabled',enabled);note.textContent=enabled?'已启用用户绑定，用户进入项目及发起服务时按项目规则校验权限':'若选择否，用户进入项目时及发起服务时，不校验任何权限，适合无备案项目使用'}
+    function ready(){document.body.dataset.prototypeMode=new URLSearchParams(location.search).get('prototypeMode')||'annotation'}
+    window.addEventListener('message',e=>{if(e.data.type==='prototype:set-mode')document.body.dataset.prototypeMode=e.data.mode;if(e.data.type==='prototype:highlight'){const node=document.querySelector('[data-change-id="'+e.data.changeId+'"]');if(node){node.scrollIntoView({behavior:'smooth',block:'center'});node.classList.add('highlight');setTimeout(()=>node.classList.remove('highlight'),1500)}}})
+    ready()
+  </script>
+</body>
+</html>

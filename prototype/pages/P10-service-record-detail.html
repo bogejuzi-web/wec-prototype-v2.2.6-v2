@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>P10 服务记录详情</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f5f8f9;color:#233746;font:14px "Microsoft YaHei",Arial}.phone{min-height:100vh;max-width:430px;margin:auto;background:#f5f8f9}.header{height:55px;background:#fff;display:flex;align-items:center;padding:0 17px}.header span{font-size:26px}.header h1{font-size:17px;margin:auto}.head{background:linear-gradient(135deg,#e5f9f5,#eff9ff);padding:19px}.head h2{font-size:19px;margin:0 0 8px}.head p{margin:0;color:#67808d;font-size:12px}.status{margin-top:12px;display:inline-block;background:#def4ed;color:#087e70;border-radius:13px;padding:4px 10px}.card{background:#fff;border-radius:9px;margin:13px;padding:16px}.card h3{font-size:16px;border-left:3px solid #009b92;padding-left:8px;margin:0 0 15px}.round{border-bottom:1px solid #edf0f1;padding:13px 0}.round:last-child{border-bottom:0}.round b{font-size:15px}.file{padding:8px;background:#f8fafb;margin-top:8px;color:#3c5562}.file small{float:right;color:#87969e}.report{display:flex;align-items:center;gap:12px;padding:12px;background:#effaf8;border-radius:7px}.reporticon{width:38px;height:38px;border-radius:19px;background:#009b92;color:#fff;line-height:38px;text-align:center}.link{margin-left:auto;color:#009b92}.tag{background:#fff0c7;color:#9a6900;border-radius:8px;padding:1px 5px;font-size:11px}body[data-prototype-mode="prototype"] .tag{display:none}.highlight{outline:3px solid #f59e0b;outline-offset:3px}
+  </style>
+</head>
+<body>
+  <main class="phone">
+    <header class="header"><span>‹</span><h1>服务详情</h1><span style="width:17px"></span></header>
+    <section class="head"><h2>海外多学科会诊（MDT）</h2><p>服务单号：TKT20260820001　　2026-08-20 发起</p><span class="status" data-change-id="P10-C01">处理中 <span class="tag">P10-C01</span></span></section>
+    <section class="card" data-change-id="P10-C02">
+      <h3>材料收集记录 <span class="tag">P10-C02</span></h3>
+      <div class="round"><b>基础病历资料</b><div class="file">▧ 病历资料.pdf</div><div class="file">▧ 检查报告.jpg</div></div>
+      <div class="round"><b>补充影像资料</b><div class="file">▧ 影像资料（旧）.jpg</div><div class="file">▧ 影像资料（新）.jpg</div></div>
+    </section>
+    <section class="card" data-change-id="P10-C04"><h3>报告</h3><div class="report"><span class="reporticon">▧</span><span><b>体检报告解读结果</b><br><small>2026-08-22 已由运营人员推送</small></span><span class="link" onclick="alert('打开报告预览')">查看</span></div><span class="tag">P10-C04</span></section>
+  </main>
+  <script>
+    function init(){document.body.dataset.prototypeMode=new URLSearchParams(location.search).get('prototypeMode')||'annotation'}
+    window.addEventListener('message',e=>{if(e.data.type==='prototype:set-mode')document.body.dataset.prototypeMode=e.data.mode;if(e.data.type==='prototype:highlight'){const n=document.querySelector('[data-change-id="'+e.data.changeId+'"]');if(n){n.scrollIntoView({behavior:'smooth',block:'center'});n.classList.add('highlight');setTimeout(()=>n.classList.remove('highlight'),1500)}}});init()
+  </script>
+</body>
+</html>

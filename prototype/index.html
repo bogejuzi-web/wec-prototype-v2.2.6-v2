@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0; url=prototype-index.html">
+  <title>正在打开 HTML 业务原型</title>
+  <style>body{margin:0;display:grid;min-height:100vh;place-items:center;color:#334155;background:#f1f5f9;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:#0f766e}</style>
+</head>
+<body>
+  <p>正在打开承载页；未跳转请<a href="prototype-index.html">点击进入 HTML 业务原型</a>。</p>
+  <script>
+    window.location.replace(`prototype-index.html${window.location.search}${window.location.hash}`);
+  </script>
+</body>
+</html>

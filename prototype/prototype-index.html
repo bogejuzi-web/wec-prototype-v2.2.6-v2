@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML 业务原型</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="shared/frame.css">
+</head>
+<body>
+  <header class="prototype-header">
+    <div class="prototype-title">
+      <strong id="project-name">HTML 原型</strong>
+      <span id="project-version"></span>
+    </div>
+    <div class="prototype-controls" aria-label="原型控制">
+      <label>页面 <select id="page-select" aria-label="切换页面"></select></label>
+      <div class="segmented" aria-label="显示尺寸">
+        <button type="button" data-viewport="desktop" aria-pressed="true">电脑</button>
+        <button type="button" data-viewport="tablet" aria-pressed="false">平板</button>
+        <button type="button" data-viewport="mobile" aria-pressed="false">手机</button>
+      </div>
+      <div class="segmented" aria-label="查看模式">
+        <button type="button" data-mode="prototype" aria-pressed="false">纯原型</button>
+        <button type="button" data-mode="annotation" aria-pressed="true">设计注释</button>
+      </div>
+      <button id="toggle-annotations" type="button" aria-controls="annotation-panel" aria-pressed="true">隐藏注释</button>
+    </div>
+  </header>
+
+  <main class="prototype-layout">
+    <nav id="page-nav" class="page-nav" aria-label="原型页面"></nav>
+
+    <section class="prototype-stage" aria-label="原型画布">
+      <div class="stage-toolbar">
+        <strong id="current-page-title">当前页面</strong>
+        <div id="scene-controls" class="scene-controls" hidden aria-label="子页面/弹窗切换"></div>
+        <div class="stage-actions">
+          <button id="reset-page" type="button">重置原型</button>
+          <button id="open-page" type="button">独立打开</button>
+        </div>
+      </div>
+      <div id="viewport-shell" class="viewport-shell" data-viewport="desktop">
+        <iframe id="prototype-frame" title="业务原型页面"></iframe>
+      </div>
+    </section>
+
+    <button id="annotation-resizer" class="annotation-resizer" type="button" aria-label="拖动调整注释区宽度" title="拖动调整注释区宽度"></button>
+
+    <aside id="annotation-panel" class="annotation-panel" aria-label="设计说明">
+      <section>
+        <h2>关联需求</h2>
+        <div id="page-requirements" class="requirement-list"></div>
+      </section>
+      <section>
+        <h2>功能概览</h2>
+        <p id="page-overview"></p>
+        <h3>当前页面作用</h3>
+        <p id="page-role"></p>
+        <p id="page-scenario" class="page-scenario" hidden></p>
+        <img id="page-illustration" alt="" loading="lazy" decoding="async" fetchpriority="low" hidden>
+      </section>
+      <section id="page-flow-section" hidden>
+        <h2>整体流程</h2>
+        <div id="page-flow" class="flow-steps"></div>
+      </section>
+      <section>
+        <h2>本次改动</h2>
+        <div id="change-list"></div>
+      </section>
+    </aside>
+  </main>
+
+  <script src="prototype-data.js"></script>
+  <script src="shared/frame.js"></script>
+</body>
+</html>
