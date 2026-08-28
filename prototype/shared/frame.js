@@ -295,7 +295,7 @@
       primaryNode.appendChild(create("h2", primary.title, "nav-primary-title"));
       (primary.groups || []).forEach((group) => {
         const groupNode = create("section", undefined, "nav-secondary");
-        groupNode.appendChild(create("h3", group.title, "nav-secondary-title"));
+        if (group.title) groupNode.appendChild(create("h3", group.title, "nav-secondary-title"));
         (group.pageIds || []).forEach((pageId) => {
           const page = pageById(pageId);
           if (!page || groupedIds.has(page.id)) return;

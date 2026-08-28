@@ -1,7 +1,7 @@
 window.PROTOTYPE_DATA = {
   "project": "睿聆智能云｜新华尊项目",
   "version": "v2.2.6-v2",
-  "generatedAt": "2026-08-26T10:00:00+08:00",
+  "generatedAt": "2026-08-28T10:00:00+08:00",
   "navigation": [
     {
       "title": "项目说明",
@@ -18,6 +18,10 @@ window.PROTOTYPE_DATA = {
         {
           "title": "万能表单-服务请求",
           "pageIds": ["P01", "P11", "P06"]
+        },
+        {
+          "title": "",
+          "pageIds": ["P19"]
         }
       ]
     },
@@ -53,7 +57,7 @@ window.PROTOTYPE_DATA = {
       "groups": [
         {
           "title": "未分组页面",
-          "pageIds": ["P02", "P03"]
+          "pageIds": ["P02", "P03", "P20"]
         }
       ]
     }
@@ -514,6 +518,34 @@ window.PROTOTYPE_DATA = {
           "result": "仅报告完成并由运营人员手动推送后显示"
         }
       ],
+      "states": []
+    },
+    {
+      "id": "P19",
+      "title": "服务请求管理-服务请求万能表单查看",
+      "file": "pages/P19-service-request-universal-form-view.html",
+      "viewport": "PC",
+      "requirements": ["R08"],
+      "illustration": "assets/illustrations/p19-service-request-form-view-xiaohei.png",
+      "overview": "复刻服务请求管理中的服务请求详情弹窗，展示 C 端提交信息与跟进信息。",
+      "pageRole": "客服或运营人员查看服务请求及用户提交信息。",
+      "scenario": "运营人员在服务请求管理中查看某条服务请求详情。",
+      "flow": {"current": "P19", "steps": [{"id": "P06", "title": "用户提交服务请求"}, {"id": "P19", "title": "查看服务请求详情"}]},
+      "changes": [{"id": "P19-C01", "location": "服务请求详情－C端提交信息", "action": "根据服务请求所属项目加载对应的万能表单字段及用户提交值", "result": "本次升级万能表单后，C端提交信息板块随项目设置展示对应内容"}],
+      "states": []
+    },
+    {
+      "id": "P20",
+      "title": "提交服务请求",
+      "file": "pages/P20-submit-service-request.html",
+      "viewport": "H5",
+      "requirements": ["R08"],
+      "illustration": "assets/illustrations/p20-submit-service-request-xiaohei.png",
+      "overview": "复刻提交服务请求弹层，仅保留就诊人姓名、性别、身份类别、证件号信息、联系电话和主诉简述六项字段。",
+      "pageRole": "用户填写并提交精简版服务请求。",
+      "scenario": "用户在 H5 人工服务中发起服务预约申请。",
+      "flow": {"current": "P20", "steps": [{"id": "P20", "title": "填写服务请求"}, {"id": "P19", "title": "查看服务请求详情"}]},
+      "changes": [{"id": "P20-C01", "location": "提交服务请求表单", "action": "保留六项核心字段并进行提交前必填校验", "result": "用户提交就诊需求后创建服务请求"}],
       "states": []
     }
   ]
